@@ -1,0 +1,218 @@
+body {
+  font-family: Palatino;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+nput[type="submit"] {
+  text-transform: uppercase;
+  font-family: "Cormorant", serif;
+}
+
+input[type=text]:focus {
+  background-color: lightblue;
+  border: 3px solid #555;
+}
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+label{
+  text-transform: uppercase;
+  font-family: "Cormorant", serif;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+option{
+  text-transform: uppercase;
+  font-family: "Cormorant", serif;
+}
+
+select{
+  text-transform: uppercase;
+  font-family: "Cormorant", serif;
+}
+
+select {
+ width: 150px;
+ padding: 5px 35px 5px 5px;
+ margin: 15px 0;
+ font-size: 0.8em;
+ -webkit-appearance: none;
+ font-family: "Cormorant", serif;
+ border: 1px solid #eee;
+ display: block;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant";
+  font-weight: 700;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-size: 1.8em;
+  color: blue;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: red;
+  margin-bottom: 20px;
+}
+
+ul.mainmenu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li.mainmenu {
+  float: left;
+}
+
+li a.mainmenu {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+/*==========================MEDIA CARDS========================================== */
+
+.card-gallery {
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: space-around;
+
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.media-card {
+  width: 25rem;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,5);
+  transition: 0.3s;
+  border-radius: 5px;
+
+
+}
+
+.media-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+
+}
+
+/* Add some padding inside the card container. 2px North and South. 16px West and East */
+.card-details {
+  padding: 2px 16px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.card-details > div {
+  padding: 5px;
+  margin: 5px;
+  line-height: 1.5rem;
+  margin-top: -30px;
+}
+
+.card-date {
+  font-weight: bold;
+  color: #cc3300;
+}
+
+.card-date > p {
+  text-align: center;
+}
+
+.card-actions {
+  position: relative;
+  top: -24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.media-card:hover span {
+  opacity: 1;
+}
+
+.card-actions button {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.card-actions button:hover {
+  background-color: #bcc6de;
+  cursor: pointer;
+}
+
+.card-actions span {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  margin: 0 5px;
+}
+
+/* ========================MEDIA QUERIES ================================= */
+
+@media(max-width: 800px) {
+
+  .media-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .card-date {
+    display: none;
+  }
+
+  .card-actions {
+    display: none;
+
+  }
+
+  .card-details > div {
+    margin-top: 0;
+  }
+
+}
